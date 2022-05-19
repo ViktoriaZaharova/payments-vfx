@@ -1,0 +1,342 @@
+@import "fonts"
+@import "vars"
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+
+
+blockquote, q
+  quotes: none
+
+blockquote:before, blockquote:after, q:before, q:after
+  content: ''
+  content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: normal
+  font-family: $default-font
+  font-weight: normal
+  background: #fff
+  color: #333
+
+html, body
+  overflow-x: hidden
+
+img
+  display: block
+  max-width: 100%
+  height: auto
+
+.text-center
+  text-align: center
+
+a
+  display: block
+  text-decoration: none
+  transition: .3s ease
+  outline: none
+  width: fit-content
+  &:hover, &:focus
+    text-decoration: none
+    
+input, textarea, select
+  outline: none
+  box-shadow: none
+  appearance: none
+  padding: 0 14px
+  box-sizing: border-box
+  font-family: $default-font
+  border: none
+    radius: 0
+  width: 100%
+  border: 2px solid #FF0000
+    radius: 3px
+  height: 40px
+  font-size: 10px
+  background: #F3F4F6
+
+  &:hover
+    outline: none
+    box-shadow: none
+  
+
+label
+  display: block
+  width: 100%
+
+button, .btn
+  outline: none
+  transition: .3s ease
+  cursor: pointer
+  box-shadow: none
+  font-family: $default-font
+  padding: 0
+  margin: 0
+  border: none
+    radius: 0
+  &:hover, &:focus
+    outline: none
+    box-shadow: none
+
+
+.btn
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+  width: fit-content
+  padding: 8px 22px
+  font-size: 18px
+  font-weight: 600
+  line-height: 20px
+
+.btn-accent
+  color: #fff
+  background: radial-gradient(92.09% 85.42% at 86.3% 87.5%, rgba(0, 0, 0, 0.23) 0%, rgba(0, 0, 0, 0) 86.18%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(65.28% 65.28% at 26.39% 20.83%, rgba(255, 255, 255, 0.413) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #B694FF
+  box-shadow: 2.44444px 5px 15px rgba(0, 0, 0, 0.25)
+  border-radius: 8px
+  &:hover
+    background: #B694FF
+    color: #fff
+
+.btn-black-blue
+  background: radial-gradient(92.09% 85.42% at 86.3% 87.5%, rgba(0, 0, 0, 0.23) 0%, rgba(0, 0, 0, 0) 86.18%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(65.28% 65.28% at 26.39% 20.83%, rgba(255, 255, 255, 0.413) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #8A8EDD
+  box-shadow: 2.44444px 5px 15px rgba(0, 0, 0, 0.25)
+  &:hover
+    background: #8A8EDD
+    color: #fff
+
+.btn-green
+  background: radial-gradient(92.09% 85.42% at 86.3% 87.5%, rgba(0, 0, 0, 0.23) 0%, rgba(0, 0, 0, 0) 86.18%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(65.28% 65.28% at 26.39% 20.83%, rgba(255, 255, 255, 0.413) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #21BF73
+  color: #fff
+  box-shadow: 2.44444px 5px 15px rgba(0, 0, 0, 0.25)
+  &:hover
+    background: #21BF73
+    color: #fff
+
+.btn-green-default
+  background: #21BF73
+  color: #fff
+  justify-content: center
+  width: 100%
+  border-radius: 3px
+  font-size: 10px
+  letter-spacing: 0.15em
+  font-weight: bold
+  font-family: $font
+  padding: 6px 13px
+  height: 36px
+  .btn-icon
+    margin: 0 0 0 auto
+  &:hover
+    background: $violet
+    color: #fff
+
+.btn-black
+  background: #000
+  font-size: 18px
+  height: 40px
+  color: #fff
+  border-radius: 3px
+  &:hover
+    background: $violet
+    color: #fff
+
+.btn-violet
+  background: #B694FF
+  color: #fff
+  width: 100%
+  border-radius: 30px
+
+.btn-go
+  min-width: 202px
+
+.btn-title
+  max-width: 103px
+  width: 100%
+  margin: 0 18px 0 0
+  padding: 0 16px 0 0
+  border-right: 1px solid #DDCDFF
+
+
+.btn-right
+  text-align: center
+  display: flex
+  flex-direction: column
+  align-items: center
+  width: 39px
+  img
+    width: 30px
+    margin-bottom: 8px
+    &:last-child
+      margin: 0
+      width: 100%
+
+
+.svg-icon
+  display: inline-block
+  width: 100%
+  height: 100%
+
+strong, b
+  font-weight: bold
+  display: inline-block
+
+.my-ul
+  list-style: none
+
+.container
+  max-width: 1170px
+
+h1
+  text-transform: uppercase
+  font-size: 24px
+  width: 100%
+  margin: 0 0 32px
+
+h2
+  font-size: 18px
+  font-weight: bold
+  width: 100%
+  text-align: center
+  margin: 0 auto 40px
+
+.mb-30
+  margin-bottom: 30px
+
+.mb-40
+  margin-bottom: 40px
+
+.links-prev
+  display: flex
+  align-items: center
+  font-size: 14px
+  color: #333
+  &:hover
+    color: #000
+  img
+    margin: 0 3px 0 0
+
+.btn-back
+  border: 1px solid $grey
+    radius: 3px
+  height: 36px
+  font-size: 10px
+  padding: 0 10px
+  img
+    transform: rotate(180deg)
+
+.btn-group
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: space-between
+  .btn
+    margin: 0
+  .btn-submit
+    max-width: 65%
+    font-size: 6.5px
+  .btn-back
+    width: 30%
+
+.btn-group>.btn-group:not(:first-child)>.btn, .btn-group>.btn:not(:first-child)
+  border-radius: 3px
+
+.btn-group>.btn-group:not(:first-child), .btn-group>.btn:not(:first-child)
+  margin-left: 0
+
+.slick-arrow
+  position: absolute
+  top: 50%
+  transform: translate(0,-50%)
+  z-index: 1
+  opacity: 1
+  cursor: pointer
+  transition: .3s ease
+  background: transparent
+
+.slick-prev
+  border:
+    top: 11px solid transparent
+    bottom: 11px solid transparent
+    right: 13px solid #B9B9C7
+  left: 0
+
+.slick-next
+  right: 0
+  border:
+    left: 13px solid #B9B9C7
+    top: 11px solid transparent
+    bottom: 11px solid transparent
+
+.checkbox
+  width: 100%
+  display: flex
+  align-items: flex-start
+  font-size: 8px
+  color: #444
+
+.inp-check
+  display: none
+  &:checked + .checkbox-custom
+    border-color: $green
+    background: $green url("../img/check.png") no-repeat center
+      size: 7px
+
+.checkbox-custom
+  width: 10px
+  min-width: 10px
+  height: 10px
+  border: 1px solid $grey
+    radius: 2px
+  margin: 0 5px 0 0
+  position: relative
+  cursor: pointer
+
+.d-inline
+  display: inline-block
+
+.color-green
+  color: $green
+
+.color-black
+  color: #000
+
+a.color-black
+  &:hover
+    color: $green
+
+.text-decoration
+  text-decoration: underline
+
+.text-transform
+  text-transform: uppercase
