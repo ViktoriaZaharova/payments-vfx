@@ -41,6 +41,9 @@
   .stages-payment-ramp .btn-group .btn
     font-size: 7px
 
+  .payment-details-col-wrapper
+    width: 50%
+
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px)
   .payment-details-item
@@ -149,6 +152,10 @@
     .btn
       margin: 0 auto 0 0
 
+  .payment-details-col .qr-code
+    max-width: 100px
+    height: 100px
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 576px)
   h1
@@ -228,9 +235,9 @@
   .stages-payment-box .btn-submit
     font-size: 12px
 
-@media only screen and (max-width: 480px)
-  /**/
-
+  .payment-details-col-wrapper
+    width: calc(100% - 100px)
+    margin: 0 auto 0 0
 
 
 @media only screen and (max-width: 420px)
@@ -242,6 +249,19 @@
     width: 100%
     justify-content: center
 
+  .payment-details-col-wrapper
+    padding: 0
+    margin: 0
+    width: 100%
+
+  .payment-details-col .qr-code
+    margin: 0 auto 30px
+
+  .payment-details-info-currency
+    max-width: none
+    width: fit-content
+    p
+      margin: 0
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 350px)

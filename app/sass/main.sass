@@ -94,7 +94,21 @@
   align-items: flex-start
   flex-wrap: wrap
   &:last-child
-    width: 51%
+    width: 46%
+  .qr-code
+    max-width: 133px
+    height: 128px
+    width: 100%
+    margin: 0
+    background: #E4E4E4
+    padding: 10px
+
+
+.payment-details-col-wrapper
+  width: calc(100% - 133px)
+  padding: 0 13px 0 0
+  .payment-details-row
+    width: 100%
 
 .payment-details-item
   width: 50%
@@ -141,11 +155,21 @@
   font-weight: 600
   line-height: 26px
   .icon
-    margin: 0 0 0 10px
+    margin: 0 0 0 15px
     min-width: 16px
 
   &:last-child
     margin-right: 0
+
+.payment-details-info-currency
+  max-width: 193px
+  width: 100%
+  p
+    margin: 0 auto
+
+.payment-details-info-wallet
+  max-width: 310px
+  width: 100%
 
 .form-payment
   label
